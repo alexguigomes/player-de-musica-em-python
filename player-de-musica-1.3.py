@@ -17,9 +17,9 @@ green = (0, 255, 0)
 
 font = pygame.font.Font(None, 36)
 
-sound = pygame.mixer.Sound("Vestron Vulture - Judas Effect.mp3")
+sound = pygame.mixer.Sound("Vestron Vulture - Phantom.mp3")
 
-pygame.mixer.music.load('Vestron Vulture - Judas Effect.mp3')
+pygame.mixer.music.load('Vestron Vulture - Phantom.mp3')
 
 pause_button = pygame.Rect(50, 300, 100, 40) 
 
