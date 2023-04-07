@@ -1,8 +1,15 @@
 import pygame
-
 pygame.init()
 
 window = pygame.display.set_mode((380, 380))
+pygame.display.set_caption("Guilherme")
+
+
+background = pygame.image.load('foto2.jpg').convert()
+background = pygame.transform.scale(background, (380, 380))
+
+window.blit(background, (0, 0))
+pygame.display .flip()
 
 white = (255, 255, 255)
 black = (0, 0, 0)
@@ -14,12 +21,13 @@ sound = pygame.mixer.Sound("Vestron Vulture - Judas Effect.mp3")
 
 pygame.mixer.music.load('Vestron Vulture - Judas Effect.mp3')
 
-pause_button = pygame.Rect(50, 300, 100, 40)
+pause_button = pygame.Rect(50, 300, 100, 40) 
 
 play_button = pygame.Rect(180, 300, 100, 40)
 
 
 pygame.mixer.music.play()
+
 
 while True:
     for event in pygame.event.get():
@@ -34,6 +42,7 @@ while True:
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if pause_button.collidepoint(event.pos):
                 pygame.mixer.music.play()
+
 
     pygame.draw.rect(window, white, pause_button)
     text = font.render("Pause", True, black)
